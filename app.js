@@ -9,9 +9,7 @@ app.use("/api/user", router);
 app.use("/api/blog/", blogRouter);
 
 mongoose
-	.connect(
-		"mongodb+srv://admin:innNqVKq5BltNj2D@cluster0.gxxuidh.mongodb.net/social-media?retryWrites=true&w=majority"
-	)
+	.connect("your mongoDb")
 	.then(() => app.listen(5000))
 	.then(console.log("Connected to database and running in port 5000"))
 	.catch((err) => console.log(err));
